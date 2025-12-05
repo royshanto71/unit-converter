@@ -288,7 +288,115 @@ header p {
         font-size: 2.2rem;
     }
     
-    .converter-card {
+    .converter-card, .constants-card {
         padding: 20px;
     }
+
+    .constants-list {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* Constants Page Styles */
+.constants-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.constants-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.constant-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.constant-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.constant-icon {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.constant-info h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.constant-info .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.constant-info .unit {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.nav-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 20px;
+}
+
+.back-btn, .constants-link-btn {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-btn:hover, .constants-link-btn:hover {
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Link to constants on index page */
+.constants-link-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
