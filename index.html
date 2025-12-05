@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Unit Converter</h1>
+            <p>Seamless conversions for every dimension.</p>
+        </header>
+
+        <div class="converter-card">
+            
+            <div class="category-nav">
+                <button class="nav-btn active" data-category="length"><i class="fa-solid fa-ruler-combined"></i> <span>Length</span></button>
+                <button class="nav-btn" data-category="weight"><i class="fa-solid fa-weight-hanging"></i> <span>Weight</span></button>
+                <button class="nav-btn" data-category="temperature"><i class="fa-solid fa-temperature-half"></i> <span>Temp</span></button>
+                <button class="nav-btn" data-category="volume"><i class="fa-solid fa-flask"></i> <span>Volume</span></button>
+                <button class="nav-btn" data-category="area"><i class="fa-solid fa-chart-area"></i> <span>Area</span></button>
+                <button class="nav-btn" data-category="speed"><i class="fa-solid fa-gauge-high"></i> <span>Speed</span></button>
+                <button class="nav-btn" data-category="time"><i class="fa-solid fa-clock"></i> <span>Time</span></button>
+                <button class="nav-btn" data-category="data"><i class="fa-solid fa-hard-drive"></i> <span>Data</span></button>
+            </div>
+
+            <div class="converter-body">
+                <div class="input-group">
+                    <label for="from-value">From</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="from-value" placeholder="0" value="1">
+                        <select id="from-unit"></select>
+                    </div>
+                </div>
+
+                <div class="swap-icon">
+                    <button id="swap-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+                </div>
+
+                <div class="input-group">
+                    <label for="to-value">To</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="to-value" placeholder="0" readonly>
+                        <select id="to-unit"></select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="formula-display">
+                <p id="conversion-formula">1 Meter = 3.28084 Feet</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
